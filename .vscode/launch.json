@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Exécuter programme C++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/monprogramme",  // L'exécutable généré
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Activer le débogage avec gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Compiler C++",  // Lance la compilation avant
+            "miDebuggerPath": "/usr/bin/gdb",  // Le chemin de gdb sous Codespaces
+            "logging": {
+                "moduleLoad": false
+            }
+        }
+    ]
+}
